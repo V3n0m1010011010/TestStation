@@ -1,3 +1,3 @@
 Add-Type -AssemblyName System.Windows.Forms
-$tree = $env:USERNAME
+$Username = "\nUsername: $($env:USERNAME)"
 [System.Windows.Forms.MessageBox]::Show($tree, "Achtung", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
