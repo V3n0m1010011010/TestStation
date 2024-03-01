@@ -1,8 +1,6 @@
 Add-Type -AssemblyName System.Windows.Forms
 $Username = "`nUsername: $($env:USERNAME)"
-$netinfo = "`n`n$(ipconfig)`n`n"
-$netProfiles = "$(netsh wlan show profiles | Select-String -Pattern 'Profil für')"
-$endText1 = $Username+$netinfo
-$endText2 = $netProfiles
+$netinfo = "`n`n$(ipconfig |Select-String -Pattern 'Profil für)"
+$netProfiles = "`n$(netsh wlan show profiles | Select-String -Pattern 'IP')"
+$endText1 = $Username+$netinfo+$netProfiles
 [System.Windows.Forms.MessageBox]::Show($endText1, "Don't plugin random USB's", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
-#[System.Windows.Forms.MessageBox]::Show($endText2, "Don't plugin random USB's", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
