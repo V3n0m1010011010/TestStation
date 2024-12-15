@@ -23,6 +23,6 @@ function Show-Error {
         [System.Windows.Forms.MessageBox]::Show($using:Message, $using:Title, [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
     }
 }
-for ($i = 0; $i -le 2; $i++) {
+for ($i = 0; $i -le 10; $i++) {
     Show-Error -Message "$EndText"
 }
