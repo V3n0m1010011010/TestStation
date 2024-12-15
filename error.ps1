@@ -11,8 +11,8 @@
 Add-Type -AssemblyName System.Windows.Forms
 $Username = "Username: $($env:USERNAME)"
 $NetInfo = "IP Information:`n`n$(ipconfig | Select-String -Pattern 'IPv4')"
-$NetProfiles = "Wi-Fi Profiles:`n`n$(netsh wlan show profiles | Select-String -Pattern 'All User Profile')"
-$EndText = "$Username`n`n$NetInfo`n`n$NetProfiles"
+#$NetProfiles = "Wi-Fi Profiles:`n`n$(netsh wlan show profiles | Select-String -Pattern 'All User Profile')"
+$EndText = "$Username`n`n$NetInfo"
 function Show-Error {
     param (
         [string]$Message = "Error",
